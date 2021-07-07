@@ -1,52 +1,50 @@
-import React from 'react'
+import React, {useState} from 'react'
+
 
 const NavLinks = () => {
-    const [navLinks, setnavLinks] = useState()[
+
+    const [navLinks, setnavLinks] = useState([
         {
-          id: 1,
-          name: 'About',
-          underlined: true,
+            id: 1,
+            title: 'About',
+            underlined: true,
         },
         {
-          id: 2,
-          name: 'Portfolio',
-          underlined: false,
+            id: 2,
+            title: 'Portfolio',
+            underlined: false
         },
         {
-          id: 3,
-          name: 'Resume',
-          underlined: false,
+            id: 3,
+            title: 'Resume',
+            underlined: false,
         },
         {
-          id: 4,
-          name: 'Contact',
-          underlined: false,
+            id: 4,
+            title: 'Contact',
+            underlined: false,
         },
         {
-          id: 5,
-          name: 'Now',
-          underlined: false,
+            id: 5,
+            title: 'Now',
+            underlined: false,
         }
-      ]}
+    ])
+
+    const toggleUnderline = (id) => {
+    // Toggles 'underline' property of chosen navlink item to true. Sets all others to false
+        setnavLinks(navLinks.map((link) => link.id === id ? { ...link, underlined: true} : { ...link, underlined: false }))
+    }
 
     return (
-        <div>
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><u>About</u></a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link">Portfolio</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">Resume</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">Now</a>
-            </li>
-        </div>
+        <ul class="navbar-nav ms-auto">
+            {/* Make list of HTML of each navbar item */}
+            {navLinks.map((link) => 
+            ( <li class="nav-item" onClick={() => toggleUnderline(link.id)}>
+              <a class="nav-link active" aria-current="page" href="#">{(link.underlined ? <u>{link.title}</u>: `${link.title}` )}</a>
+              </li> )
+            )}
+        </ul>
     )
 }
 
