@@ -1,0 +1,19 @@
+
+/********************/
+/* Header component */
+/********************/
+
+nav {
+  background-color: rgb(20, 107, 20);
+}
+
+nav .navbar-brand {
+  color: white !important;
+  font-family: 'Alef', sans-serif;
+  font-size: 40px;
+  }
+
+nav .navbar-nav li a {
+  color: white !important;
+  font-family: 'Alef', sans-serif;
+}
