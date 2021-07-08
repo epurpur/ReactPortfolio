@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
     return (
         <div id='About'> 
-            <h1> About Me </h1>
+            <h1><u> About Me </u></h1>
             <section id="AboutMeContainer">
                 <div id="AboutMeImg">
                 <img src="https://avatars.githubusercontent.com/u/36010345?s=460&u=10800388b8f1955e283ad5dec7a574f39e9215af&v=4" alt="Erich Purpur headshot"></img>

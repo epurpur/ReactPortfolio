@@ -3,6 +3,7 @@
 /* Structure of CSS document.
 
 - CSS variable/property definitions
+- Global styles
 - Header properties
 - About component properties
 - Footer properties
@@ -14,16 +15,27 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 :root {
+  /* Colors */
   --background-black: #1A1A1D;
+  --mainsection-gray: rgb(85, 85, 85);
   --font-pink: #F64C72;
   --font-cream: rgb(223, 223, 223);
-
+  /* Styles */
   --text-header: 'Shadows Into Light', cursive;
   --text-normal: 'Newsreader', serif;
+  /* Sizes */
+  --text-header-size: 70px;
 }
 
-.App {
-  background-color: rgb(9, 12, 10);
+/*****************/
+/* Global styles */
+/*****************/
+
+.App {background-color: var(--mainsection-gray)}
+
+h1 {
+  font-family: var(--text-header);
+  color: var(--background-black);
 }
 
 /********************/
@@ -31,29 +43,32 @@
 /********************/
 
 nav {
-  background-color: rgb(20, 107, 20);
+  background-color: var(--background-black);
 }
 
 nav .navbar-brand {
-  color: white !important;
-  font-family: 'Alef', sans-serif;
-  font-size: 40px;
+  color: var(--font-pink) !important;
+  font-family: var(--text-header);
+  font-size: 60px;
   }
 
 nav .navbar-nav li a {
-  color: white !important;
-  font-family: 'Alef', sans-serif;
-  font-size: 20px;
+  color: var(--font-pink) !important;
+  font-family: var(--text-header);
+  font-size: 40px;
+  margin: 0 10px 0 10px;
 }
 
 /*******************/
 /* About component */
 /*******************/
 
-#About * {
-  border: 1px solid black;
+#About  {
   text-align: center;
+  margin-top: 10px;
 }
+
+#About h1 {font-size: 60px}
 
 #AboutMeContainer{
   display: flex;
@@ -73,4 +88,7 @@ nav .navbar-nav li a {
 #AboutMeText {
   width: 65%;
   padding: 5px;
+  font-family: var(--text-normal);
+  color: var(--font-cream);
+  font-size: 20px;
 }
