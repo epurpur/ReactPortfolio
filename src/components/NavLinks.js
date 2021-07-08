@@ -16,7 +16,7 @@ const NavLinks = () => {
         },
         {
             id: 3,
-            title: 'Resume',
+            title: 'Resumé',
             underlined: false,
         },
         {
