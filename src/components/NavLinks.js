@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import { Link } from 'react-router-dom'
 
 const NavLinks = () => {
 
@@ -42,7 +42,7 @@ const NavLinks = () => {
             {navLinks.map((link) => 
             ( <li class="nav-item" onClick={() => toggleUnderline(link.id)}>
             {/* Use conditional to evaluate if id.underlined === true. If so add underline tag. If not, no underline */}    
-              <a class="nav-link active" aria-current="page" href={link.title}>{(link.underlined ? <u>{link.title}</u>: `${link.title}` )}</a>
+              <Link className="nav-link active" aria-current="page" to={link.title}>{(link.underlined ? <u>{link.title}</u>: `${link.title}` )}</Link>
               </li> )
             )}
         </ul>
