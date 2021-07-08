@@ -1,4 +1,3 @@
-
 /********************/
 /* Header component */
 /********************/
@@ -16,4 +15,25 @@ nav .navbar-brand {
 nav .navbar-nav li a {
   color: white !important;
   font-family: 'Alef', sans-serif;
+}
+
+/*******************/
+/* About component */
+/*******************/
+
+#About * {
+  border: 1px solid black;
+}
+
+#AboutMeContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+#AboutMeImg {
+  width: 35%
+}
+
+#AboutMeText {
+  width: 65%
 }
