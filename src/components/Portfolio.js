@@ -62,13 +62,20 @@ const Portfolio = () => {
         }
       ])
 
+    const returnActiveProjects = () => {
+      // filters out only those projects which have a property of active: true
+      const activeProjects = projects.filter((project) => project.active)
+      
+      //set HTML for those projects
+      return activeProjects.map((project) =>
+      (<img class="img-card-top" id="portfolioCard" src={`/images/${project.imgLink}.png`} alt={`${project.title} application screenshot`}></img>))
+    } 
+
     return (
         <div>
             <h1 id="workPortfolioTitle"> Work Portfolio </h1>
             <div class="card" id="portfolioCardsHolder">
-                {projects.map((project) => 
-                (<img class="img-card-top" src={`/images/${project.imgLink}.png`} alt="testImg" id="portfolioCard"></img>)
-                )}
+              {returnActiveProjects()}
             </div>
         </div>
     )
