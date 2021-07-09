@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
+import SingleProject from './SingleProject'
 
 const Portfolio = () => {
 
@@ -12,6 +14,7 @@ const Portfolio = () => {
           <a href='https://www.djangoproject.com/'>Django</a> framework. The app analyzes datasets in various ways using the python libraries <a href='https://pandas.pydata.org/'>Pandas</a> and <a href='https://numpy.org/'>NumPy</a> before returning the data to the front-end.
           The user interface allows users to modify their view of the data on the fly and displays it using <a href='https://www.highcharts.com/'>HighCharts</a>, a javascript plotting library.`,
           imgLink: 'onefigrapp',
+          deployLink: 'https://onefigrapp.lib.virginia.edu/app/',
         },
         {
           id: 2,
@@ -21,6 +24,7 @@ const Portfolio = () => {
           throughout North America. Using the <a href="https://docs.qgis.org/3.16/en/docs/pyqgis_developer_cookbook/index.html">QGIS Python API</a> (PyQGIS), the plugin takes publicly available land use/land cover data, analyzes it, and returns a view of land value. 
           by various parameters in the user's study area. It is <a href="https://plugins.qgis.org/plugins/ecovaluator/">freely available for download</a> by any QGIS user.`,
           imgLink: 'ecovaluator',
+          deployLink: 'http://www.keylogeconomics.com/ecovaluator.html',
         },
         {
           id: 3,
@@ -31,6 +35,7 @@ const Portfolio = () => {
           integrated this data into the company's <a href=" https://www.salesforce.com/">Salesforce</a> instance and configured <a href="https://www.geopointe.com/">Geopointe</a>, a native Salesforce mapping extension, to visualize the data spatially. 
           This allows for easier integration with the company's direct-mail workfow and management of its internal data.`,
           imgLink: 'geopointe',
+          deployLink: 'https://boonerealestate.com/',
         },
         {
           id: 4,
@@ -40,6 +45,7 @@ const Portfolio = () => {
           application built on the MVC Framework. It has a <a href="https://www.mysql.com/">MySQL </a> database and <a href="https://sequelize.org/">Sequelize ORM</a>, <a href="https://expressjs.com/"> Express </a> server and restful API, and <a href="https://handlebarsjs.com/">Handlebars </a> templating engine for server side rendering.
           The front-end utilizes the <a href="https://leafletjs.com/">Leaflet</a> mapping library and <a href="http://tabulator.info/">Tabulator</a> to render the data table.`,
           imgLink: 'lightCville',
+          deployLink: 'https://lightcville.herokuapp.com/login',
         },
         {
           id: 5,
@@ -50,6 +56,7 @@ const Portfolio = () => {
           using weather data from <a href="https://openweathermap.org/">OpenWeatherMap</a>. The map is implemented with <a href="https://developers.google.com/maps/documentation/javascript/overview"> Google Maps Javascript API</a> and location data is stored in a lightweight
           <a href="https://www.sqlite.org/index.html">SQLite</a> back end.`,
           imgLink: 'isitdry',
+          deployLink: 'https://isitdry.herokuapp.com/',
         },
         {
           id: 6,
@@ -59,6 +66,7 @@ const Portfolio = () => {
           National Historic Sites, National Monuments, etc. The site uses Google's <a href="https://materializecss.com/">Materialize</a> CSS, <a href="https://leafletjs.com/">Leaflet</a> javascript mapping library, and <a href="https://jqueryui.com/"> jQuery UI</a>
           for some of the UI components. All data is fetched from the <a href="https://www.nps.gov/subjects/developer/api-documentation.htm">National Park Service API</a>`,
           imgLink: 'npsfinder',
+          deployLink: 'https://epurpur.github.io/NationalParkService/',
         }
       ])
 
@@ -70,7 +78,12 @@ const Portfolio = () => {
       
       //returns HTML for those projects
       return activeProjects.map((project) =>
-      (<img class="img-card-top" id="portfolioCard" src={`/images/${project.imgLink}.png`} alt={`${project.title} application screenshot`}></img>))
+      ///////START HERE ////////
+      (
+        <Router>
+      <a href={<Route path={`/${project.title}`} component={SingleProject} />}><img class="img-card-top" id="portfolioCard" src={`/images/${project.imgLink}.png`} alt={`${project.title} application screenshot`}></img></a>
+        </Router>
+      ))
     } 
 
     return (
