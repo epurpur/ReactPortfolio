@@ -11,7 +11,7 @@ import Contact from './components/Contact'
 import Now from './components/Now'
 
 function App() {
-
+  
   return (
     <Router>
       <div className="App">
