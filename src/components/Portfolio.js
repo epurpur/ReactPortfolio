@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+
 const Portfolio = () => {
 
     const [projects, setProjects] = useState([
@@ -19,7 +20,7 @@ const Portfolio = () => {
           info: `This is a python plugin built for the Open Source GIS software, <a href="https://qgis.org/en/site/">QGIS</a>. EcoValuator was built for <a href="http://www.keylogeconomics.com/">Key-Log Economics</a> to be used as a simple means of analyzing land valuation
           throughout North America. Using the <a href="https://docs.qgis.org/3.16/en/docs/pyqgis_developer_cookbook/index.html">QGIS Python API</a> (PyQGIS), the plugin takes publicly available land use/land cover data, analyzes it, and returns a view of land value. 
           by various parameters in the user's study area. It is <a href="https://plugins.qgis.org/plugins/ecovaluator/">freely available for download</a> by any QGIS user.`,
-          imgLink: 'ecovaluator.png',
+          imgLink: 'ecovaluator',
         },
         {
           id: 3,
@@ -29,7 +30,7 @@ const Portfolio = () => {
           python scripts as well as PostgreSQL's <a href="https://postgis.net/">PostGIS</a> spatial extension in order to clean the large dataset (~230k records). I later
           integrated this data into the company's <a href=" https://www.salesforce.com/">Salesforce</a> instance and configured <a href="https://www.geopointe.com/">Geopointe</a>, a native Salesforce mapping extension, to visualize the data spatially. 
           This allows for easier integration with the company's direct-mail workfow and management of its internal data.`,
-          imgLink: 'boonerealestate',
+          imgLink: 'geopointe',
         },
         {
           id: 4,
@@ -63,11 +64,10 @@ const Portfolio = () => {
 
     return (
         <div>
-
-            <h1> Work Portfolio </h1>
+            <h1 id="workPortfolioTitle"> Work Portfolio </h1>
             <div class="card" id="portfolioCardsHolder">
                 {projects.map((project) => 
-                (<img class="img-card-top" src="https://avatars.githubusercontent.com/u/36010345?s=460&u=10800388b8f1955e283ad5dec7a574f39e9215af&v=4" alt="testImg" id="portfolioCard"></img>)
+                (<img class="img-card-top" src={`/images/${project.imgLink}.png`} alt="testImg" id="portfolioCard"></img>)
                 )}
             </div>
         </div>

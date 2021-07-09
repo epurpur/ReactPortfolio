@@ -36,6 +36,7 @@
 h1 {
   font-family: var(--text-header);
   color: var(--background-black);
+  text-align: center;
 }
 
 /********************/
@@ -100,16 +101,23 @@ nav .navbar-nav li a {
 /***********************/
 /* Portfolio component */
 /***********************/
+
+#workPortfolioTitle {font-size: 70px;}
+
 #portfolioCardsHolder {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: var(--mainsection-gray);
 }
 
 #portfolioCard { 
-  height: 300px;
-  padding: 10px;
+  height: 400px;
+  width: 500px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 /********************/
