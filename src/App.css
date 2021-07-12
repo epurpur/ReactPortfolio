@@ -56,7 +56,6 @@
 
 .App th {
   color: var(--font-pink);
-  size: 2em;
 }
 
 
@@ -141,6 +140,27 @@ nav .navbar-nav li a {
   transition: .5s;
 }
 
+/*********************/
+/* Contact Component */
+/*********************/
+
+form { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 0 60px 0 60px;
+  color: var(--font-pink);
+  font-family: var(--text-normal);
+  font-size: 20px;
+}
+
+
+button { 
+  background-color: var(--background-black);
+  color: var(--font-pink);
+}
+
 
 /*****************/
 /* Now Component */
@@ -161,7 +181,6 @@ nav .navbar-nav li a {
 #nowCategories{ font-size: 20px;}
 
 
-
 /********************/
 /* Footer Component */
 /********************/
@@ -170,7 +189,6 @@ footer {
   background-color: var(--background-black);
   text-align: center;
   color: var(--font-cream);
-  font-family: var(--text-header);
   font-size: 25px;
   padding: 10px 0 10px 0;
 }
