@@ -24,14 +24,14 @@ const Now = () => {
                     <tbody>
                         <tr>
                             <th scope="row"><FontAwesomeIcon icon={faQuestion} size='2x'/></th>
-                            <td>I have been super busy lately. My girlfriend Sarah finished her Emergency Medicine residency at UVA Health and has moved in with me for the summer. This is a huge accomplishment and I am really proud of her! Besides that I am currently about 2/3 of the way through a coding bootcamp through the University of Richmond. 
-                            The bootcamp has been grueling but I have learned a ton and am overall enjoying it! But I am looking forward to graduation day on August 6.</td>
+                            <td>I have been super busy lately. My girlfriend Sarah finished her Emergency Medicine residency at UVA Health and has moved in with me for the summer. This is a huge accomplishment and I am really proud of her! Besides that I am currently in the last month of a coding bootcamp through the University of Richmond. 
+                            The bootcamp has been grueling but I have learned a ton and am overall enjoying it! I am looking forward to graduation day on August 6.</td>
                         </tr>
                         <br></br>
                         <tr>
                             <th scope="row"><FontAwesomeIcon icon={faSkiing} size='2x'/></th>
-                            <td>Sports and leisure activities in general have been on the back burner but the most newsworthy item is that I've signed up to run the <a href="https://grandfathermtnmarathon.com/">Grandfather Mountain Marathon</a> on July 10th! I have actually wanted to run this race for a long time.  
-                            Sarah had suggested we sign up for a marathon so we signed ourselves up. Since running the Rivanna trail (~20 miles) I have developed an overuse injury in my right achilles which is affecting my confidence and also my ability to prepare. Fingers crossed I will be healthy enough to do it when the time comes! </td>
+                            <td>Sports and leisure activities in general have been on the back burner but just this past weekend I ran the <a href="https://grandfathermtnmarathon.com/">Grandfather Mountain Marathon</a>! I have wanted to run this race for a long time as my family has worked at an aid station for many years and
+                            the course passes through my hometown. I was not fast but I did finish in time to run the final lap on the track at the Grandfather Mountain Highland Games! It is hard to think about running again in the near future as my legs are completely wrecked at the moment.</td>
                         </tr>
                         <br></br>
                         <tr>
