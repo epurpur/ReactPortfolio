@@ -33,11 +33,27 @@
 
 .App {background-color: var(--mainsection-gray)}
 
-h1 {
+.App h1 {
   font-family: var(--text-header);
   color: var(--background-black);
   text-align: center;
+  font-size: 70px;
 }
+
+.App a, .App span { 
+  color: var(--font-pink);
+  text-decoration: none;
+}
+
+.App p {
+  font-family: var(--text-normal)
+}
+
+.App td, .App th {
+  color: var(--font-cream);
+  border: none;
+}
+
 
 /********************/
 /* Header component */
@@ -70,7 +86,6 @@ nav .navbar-nav li a {
   margin: 30px 0 30px 0;
 }
 
-#About h1 {font-size: 70px}
 
 #AboutMeContainer{
   display: flex;
@@ -95,14 +110,11 @@ nav .navbar-nav li a {
   font-family: var(--text-normal);
   color: var(--font-cream);
   font-size: 25px;
-
 }
 
 /***********************/
 /* Portfolio component */
 /***********************/
-
-#workPortfolioTitle {font-size: 70px;}
 
 #portfolioCardsHolder {
   display: flex;
@@ -123,6 +135,27 @@ nav .navbar-nav li a {
   opacity: .5;
   transition: .5s;
 }
+
+
+/*****************/
+/* Now Component */
+/*****************/
+
+#nowIntro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#nowIntro{ 
+  font-size: 25px;
+  color: var(--font-cream);
+}
+
+#nowCategories{ font-size: 20px;}
+
+
 
 /********************/
 /* Footer Component */
