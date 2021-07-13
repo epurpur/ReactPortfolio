@@ -18,14 +18,15 @@ const Contact = () => {
     }
 
     // set state variables for contact-info fields
-    const [contactItems, setContactItems] = useState([
+    const [contactInfo, setContactInfo] = useState([
         {
             id: 1,
             title: 'Email',
             href: 'mailto:epurpur@gmail.com',
             imgSrc: '/images/email.png',
             alt: 'email link with letter icon',
-            data: 'epurpur@gmail.com'
+            data: 'epurpur@gmail.com',
+            target: '_blank',
         },
         {
             id: 2,
@@ -33,7 +34,8 @@ const Contact = () => {
             href: 'https://www.linkedin.com/in/erich-purpur-140a1433/',
             imgSrc: '/images/linkedin.png',
             alt: 'LinkedIn logo',
-            data: 'LinkedIn Profile'
+            data: 'LinkedIn Profile',
+            target: '_blank',
         },
         {
             id: 3,
@@ -41,22 +43,25 @@ const Contact = () => {
             href: 'https://github.com/epurpur',
             imgSrc: '/images/github.png',
             alt: 'Github logo',
-            data: 'Github Profile'
+            data: 'Github Profile',
+            target: '_blank',
         },
         {
             id: 4,
             title: 'Phone',
-            href: '',
+            href: '#',
             imgSrc: '/images/phone.png',
             alt: 'Old phone image',
-            data: '(828) 773 7140'
+            data: '(828) 773 7140',
+            target: '',
         },
     ])
 
     const [hoverText, setHoverText] = useState('');
 
-    const showHoverText = () => {
+    const showHoverText = (id) => {
     // sets state of hoverText to item that user is hovering over
+        console.log('hello');
     }
 
     return (
@@ -64,7 +69,9 @@ const Contact = () => {
             <h1> Contact Me </h1>
             <section id='contactItems'>
                 {/* Render each contact item */}
-                {contactInfo}
+                {contactInfo.map((item) => 
+                    (<a href={item.href} target={item.target}><img src={item.imgSrc} alt={item.alt} className='contact-item' data-label={item.data} onClick={showHoverText(item.id)}></img></a>)
+                )}
             </section>
             <br></br>
             <p id='hoverText'>Here</p>
