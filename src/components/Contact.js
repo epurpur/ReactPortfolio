@@ -101,7 +101,7 @@ const Contact = () => {
                     <label>Your Name</label>
                     <input
                         type="text"
-                        placeholder="Your name here"
+                        placeholder="John Doe"
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
