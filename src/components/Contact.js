@@ -70,7 +70,7 @@ const Contact = () => {
             <section id='contactItems'>
                 {/* Render each contact item */}
                 {contactInfo.map((item) => 
-                    (<a href={item.href} target={item.target}><img src={item.imgSrc} alt={item.alt} className='contact-item' data-label={item.data} onClick={showHoverText(item.id)}></img></a>)
+                    (<a key={item.id} href={item.href} target={item.target}><img src={item.imgSrc} key={item.id} alt={item.alt} className='contact-item' data-label={item.data} onMouseOver={showHoverText(item.id)}></img></a>)
                 )}
             </section>
             <br></br>

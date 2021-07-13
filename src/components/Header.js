@@ -6,10 +6,10 @@ const Header = () => {
 
     return (
     <header>   
-        <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/" id='myName'>Erich Purpur</a>
-            <div class="collapse navbar-collapse" id="navbarNav">
+        <nav className="navbar navbar-expand-lg">
+        <div className="container-fluid">
+            <a className="navbar-brand" href="/" id='myName'>Erich Purpur</a>
+            <div className="collapse navbar-collapse" id="navbarNav">
                 <NavLinks />
             </div>
         </div>
