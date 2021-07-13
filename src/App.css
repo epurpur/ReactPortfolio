@@ -209,8 +209,10 @@ footer {
   color: var(--font-cream);
   font-size: 25px;
   padding: 10px 0 10px 0;
+  font-family: var(--text-normal);
 }
 
 #footerName {
-  color: var(--font-pink)
+  color: var(--font-pink);
+  font-family: var(--text-header);
 }
