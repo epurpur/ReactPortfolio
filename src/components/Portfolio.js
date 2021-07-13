@@ -76,19 +76,32 @@ const Portfolio = () => {
         // filters out only those projects which have a property of active: true
         const activeProjects = projects.filter((project) => project.active)
         
-        //returns HTML for those projects
+        /**
+         * returns HTML for each active project
+         * Uses project.imgLink for the URL to endpoint of SingleProject component
+         *     - all routes are defined in App.js component
+         *     - 
+         * passes project information as prop to be rendered in SingleProject component
+         */
+        //START HERE. NEED TO PASS PROJECT AS PROP TO SINGLEPROJECT COMPONENT
+        // <a href={`/${project.imgLink}`}><img class="img-card-top" id="portfolioCard" src={`/images/${project.imgLink}.png`} alt={`${project.title} application screenshot`}></img></a>
+
         return activeProjects.map((project) =>
-        (
-          <Router>
-        <a href={<Route path={`/${project.title}`} component={SingleProject} />}><img class="img-card-top" id="portfolioCard" src={`/images/${project.imgLink}.png`} alt={`${project.title} application screenshot`}></img></a>
-          </Router>
+        (<div className="card">
+            <img class="image" id="portfolioCard" src={`/images/${project.imgLink}.png`} alt={`${project.title} application screenshot`}></img>
+            <a href={`/${project.imgLink}`}>
+              <div class="overlay">
+                <div class="text">{project.title}</div>
+              </div>
+            </a>
+        </div>
         ))
       } 
 
     return (
         <div>
             <h1 id="workPortfolioTitle"> Work Portfolio </h1>
-            <div class="card" id="portfolioCardsHolder">
+            <div id="portfolioCardsHolder">
               {returnActiveProjects()}
             </div>
         </div>
