@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 const NavLinks = () => {
 
+    // set state variable for nav Links
     const [navLinks, setnavLinks] = useState([
         {
             id: 1,
@@ -16,16 +17,11 @@ const NavLinks = () => {
         },
         {
             id: 3,
-            title: 'Resumé',
-            underlined: false,
-        },
-        {
-            id: 4,
             title: 'Contact',
             underlined: false,
         },
         {
-            id: 5,
+            id: 4,
             title: 'Now',
             underlined: false,
         }
