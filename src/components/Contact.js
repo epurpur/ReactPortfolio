@@ -55,13 +55,31 @@ const Contact = () => {
             data: '(828) 773 7140',
             target: '',
         },
+        {
+            id: 5,
+            title: 'Resumé',
+            href: '/images/ErichPurpurResume.pdf',
+            imgSrc: '/images/resume.png',
+            alt: 'Resumé icon',
+            data: 'Download Resumé',
+            target: '',
+        }
     ])
 
     const [hoverText, setHoverText] = useState('');
 
-    const showHoverText = (id) => {
-    // sets state of hoverText to item that user is hovering over
-        console.log('hello');
+    const showHoverText = (item) => {
+    // sets state of hoverText to item that user is hovering over. Then displays item.value in HTML of #hoverText
+        
+        // set state of hover text
+        setHoverText(item.data)
+    }
+
+    const removeHoverText = () => {
+    // sets state of hoverText to empty string when user's mouse leaves contact item
+
+        // set state of hover text to empty string
+        setHoverText('')
     }
 
     return (
@@ -70,11 +88,11 @@ const Contact = () => {
             <section id='contactItems'>
                 {/* Render each contact item */}
                 {contactInfo.map((item) => 
-                    (<a key={item.id} href={item.href} target={item.target}><img src={item.imgSrc} key={item.id} alt={item.alt} className='contact-item' data-label={item.data} onMouseOver={showHoverText(item.id)}></img></a>)
+                    (<a key={item.id} href={item.href} target={item.target}><img src={item.imgSrc} alt={item.alt} className='contact-item' data-label={item.data} onMouseOver={() => showHoverText(item)} onMouseLeave={() => removeHoverText()}></img></a>)
                 )}
             </section>
             <br></br>
-            <p id='hoverText'>Here</p>
+            <p id='hoverText'>{hoverText}</p>
             <br></br>
             <h1> Or Send a Message </h1>
             <br></br>
