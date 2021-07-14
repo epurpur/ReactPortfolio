@@ -40,13 +40,6 @@
   font-size: 70px;
 }
 
-.App h4 {
-  font-family: var(--text-normal);
-  color: var(--background-black);
-  text-align: center;
-  font-size: 30px;
-}
-
 .App a, .App span { 
   color: var(--font-pink);
   text-decoration: none;

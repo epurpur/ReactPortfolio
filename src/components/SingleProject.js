@@ -10,8 +10,6 @@ const SingleProject = ( {title, info, imgLink, deployLink} ) => {
             <p>{info}</p>
             <p>{imgLink}</p>
             <p>{deployLink}</p>
-
-            This is my project.
         </div>
     )
 }

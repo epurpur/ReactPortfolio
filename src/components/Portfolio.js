@@ -24,8 +24,7 @@ const Portfolio = ( {projects} ) => {
 
     return (
         <div>
-            <h1 id="workPortfolioTitle"> Work Portfolio </h1>
-            <h4 id="workPortfolioSubTitle"> Click card to see more </h4>
+            <h1> Work Portfolio </h1>
             <div id="portfolioCardsHolder">
               {returnActiveProjects()}
             </div>
