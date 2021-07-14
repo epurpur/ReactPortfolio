@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ProjectCard from './ProjectCard'
 
-const Portfolio = () => {
+const Portfolio = (props) => {
 
     const [projects, setProjects] = useState([
         {
@@ -89,6 +89,7 @@ const Portfolio = () => {
 
     return (
         <div>
+          <h1>{props.test}</h1>
             <h1 id="workPortfolioTitle"> Work Portfolio </h1>
             <div id="portfolioCardsHolder">
               {returnActiveProjects()}

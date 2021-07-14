@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import './App.css';
 import Header from './components/Header'
@@ -11,14 +11,31 @@ import Now from './components/Now'
 import SingleProject from './components/SingleProject';
 
 function App() {
-  
 
   return (
     <Router>
       <div className="App">
         <Header />
 
-        {/* Include all routes to individual component pages */}
+        <Switch>
+          <Route exact path="/">
+            <About />
+          </Route>
+          <Route exact path="/About">
+            <About />
+          </Route>
+          <Route exact path="/Portfolio">
+            <Portfolio test='test'/>
+          </Route>
+          <Route exact path="/Contact">
+            <Contact />
+          </Route>
+          <Route exact path="/Now">
+            <Now />
+          </Route>
+        </Switch>
+
+        {/* Include all routes to individual component pages
         <Route path='/' exact component={About} />
         <Route path='/About' component={About} />
         <Route path='/Portfolio' component={Portfolio} />
@@ -26,12 +43,13 @@ function App() {
         <Route path='/Now' component={Now} />
 
         {/* Include all routes to individual project pages in Portfolio component */}
-        <Route path='/onefigrapp' component={SingleProject} />
+        {/* <Route path='/onefigrapp' component={SingleProject} />
         <Route path='/ecovaluator' component={SingleProject} />
         <Route path='/geopointe' component={SingleProject} />
         <Route path='/lightCville' component={SingleProject} />
         <Route path='/isitdry' component={SingleProject} />
         <Route path='/npsfinder' component={SingleProject} />
+        <Route path='mytest' exact render={(props) => <h1>Hello world</h1>} /> */} */}
 
         <Footer />
       </div>
