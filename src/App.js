@@ -12,6 +12,7 @@ import SingleProject from './components/SingleProject';
 
 function App() {
   
+
   return (
     <Router>
       <div className="App">

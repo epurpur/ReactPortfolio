@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-
-import SingleProject from './SingleProject'
+import ProjectCard from './ProjectCard'
 
 const Portfolio = () => {
 
@@ -76,25 +74,16 @@ const Portfolio = () => {
         // filters out only those projects which have a property of active: true
         const activeProjects = projects.filter((project) => project.active)
         
-        /**
-         * returns HTML for each active project
-         * Uses project.imgLink for the URL to endpoint of SingleProject component
-         *     - all routes are defined in App.js component
-         *     - 
-         * passes project information as prop to be rendered in SingleProject component
-         */
-        //START HERE. NEED TO PASS PROJECT AS PROP TO SINGLEPROJECT COMPONENT
-        // <a href={`/${project.imgLink}`}><img class="img-card-top" id="portfolioCard" src={`/images/${project.imgLink}.png`} alt={`${project.title} application screenshot`}></img></a>
-
-        return activeProjects.map((project) =>
-        (<div className="card">
-            <img class="image" id="portfolioCard" src={`/images/${project.imgLink}.png`} alt={`${project.title} application screenshot`}></img>
-            <a href={`/${project.imgLink}`}>
-              <div class="overlay">
-                <div class="text">{project.title}</div>
-              </div>
-            </a>
-        </div>
+        // return a ProjectCard and pass all info into that as props
+        return activeProjects.map((project) => 
+        (
+          <ProjectCard 
+            id={project.id}
+            title={project.title}
+            info={project.info}
+            imgLink={project.imgLink}
+            deployLink={project.deployLink}
+             />
         ))
       } 
 
