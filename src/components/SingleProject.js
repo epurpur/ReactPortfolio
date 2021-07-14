@@ -1,9 +1,17 @@
 import React from 'react'
 
-const SingleProject = () => {
+const SingleProject = ( {title, info, imgLink, deployLink} ) => {
+    
+    
+
     return (
         <div>
-            This is my project
+            <p>{title}</p>
+            <p>{info}</p>
+            <p>{imgLink}</p>
+            <p>{deployLink}</p>
+
+            This is my project.
         </div>
     )
 }

@@ -97,11 +97,22 @@ function App() {
           </Route>
           <Route exact path="/Now">
             <Now />
-          </Route>
+          </Route> 
 
-
-
+          {/* Map over items in projects state and make route for each one */}
+          {projects.map((project) => (
+            <Route exact path={`/${project.imgLink}`}>
+              <SingleProject
+                title={project.title} 
+                info={project.info}
+                imgLink={project.imgLink}
+                deployLink={project.deployLink}
+            />
+            </Route>
+          ))}         
         </Switch>
+
+
 
         {/* Include all routes to individual component pages
         <Route path='/' exact component={About} />
