@@ -3,8 +3,6 @@ import ProjectCard from './ProjectCard'
 
 const Portfolio = ( {projects} ) => {
 
-
-
       const returnActiveProjects = () => {
         // gets all projects from project state. Filters out those with property active: true. Creates HTML for those projects to render in front end
   
@@ -27,6 +25,7 @@ const Portfolio = ( {projects} ) => {
     return (
         <div>
             <h1 id="workPortfolioTitle"> Work Portfolio </h1>
+            <h4 id="workPortfolioSubTitle"> Click card to see more </h4>
             <div id="portfolioCardsHolder">
               {returnActiveProjects()}
             </div>

@@ -83,6 +83,7 @@ function App() {
         <Header />
 
         <Switch>
+          {/* Create route for each page in application */}
           <Route exact path="/">
             <About />
           </Route>
@@ -99,7 +100,8 @@ function App() {
             <Now />
           </Route> 
 
-          {/* Map over items in projects state and make route for each one */}
+          {/* Map over items in projects state and make route for each one 
+              These will be rendered by clicking on a project card in the Portfolio component*/}
           {projects.map((project) => (
             <Route exact path={`/${project.imgLink}`}>
               <SingleProject
