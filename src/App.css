@@ -38,7 +38,7 @@
   color: var(--background-black);
   text-align: center;
   font-size: 70px;
-  filter: drop-shadow(5px 5px 5px var(--font-cream));
+  filter: drop-shadow(1px 1px 1px var(--font-cream));
 }
 
 .App h2 {
@@ -135,6 +135,10 @@ nav .navbar-nav li a {
   background-color: var(--mainsection-gray);
 }
 
+/**************************/
+/* Project Card Component */
+/**************************/
+
 .card {
   position: relative;
   width: 40%;
@@ -159,7 +163,6 @@ nav .navbar-nav li a {
   opacity: 0;
   transition: .5s ease;
   background-color: var(--background-black);
-  border-radius: 5px;
 }
 
 .card:hover .overlay {
@@ -183,15 +186,20 @@ nav .navbar-nav li a {
 /* Single Page Component */
 /*************************/
 
-#singleProjectPage {
+#singleProjectContainer {
   display: flex;
   flex-direction: row;
 }
 
-#singleProjectPage img {
-  height: 600px;
-  width: auto;
+#singleProjectContainer img {
+  height: auto;
+  width: 600px;
+  filter: drop-shadow(10px 10px 10px black);
+  margin: 30px;
+  border-radius: 10px;
 }
+
+
 
 /*********************/
 /* Contact Component */
