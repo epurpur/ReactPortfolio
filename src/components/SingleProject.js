@@ -5,11 +5,11 @@ const SingleProject = ( {title, info, imgLink, deployLink} ) => {
     
 
     return (
-        <div>
-            <p>{title}</p>
-            <p>{info}</p>
-            <p>{imgLink}</p>
-            <p>{deployLink}</p>
+        <div id='singleProjectPage'>
+            <img id='headerImg' src={`/images/${imgLink}.png`} alt={`${title} application screenshot`}></img>
+            <div id='SingleProjectText'>
+                <h1>{title}</h1>
+            </div>
         </div>
     )
 }

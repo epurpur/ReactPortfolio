@@ -38,6 +38,14 @@
   color: var(--background-black);
   text-align: center;
   font-size: 70px;
+  filter: drop-shadow(5px 5px 5px var(--font-cream));
+}
+
+.App h2 {
+  font-family: var(--text-header);
+  color: var(--background-black);
+  text-align: center;
+  font-size: 65px;
 }
 
 .App a, .App span { 
@@ -89,7 +97,6 @@ nav .navbar-nav li a {
   text-align: center;
   margin: 30px 0 30px 0;
 }
-
 
 #AboutMeContainer{
   display: flex;
@@ -170,6 +177,20 @@ nav .navbar-nav li a {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+/*************************/
+/* Single Page Component */
+/*************************/
+
+#singleProjectPage {
+  display: flex;
+  flex-direction: row;
+}
+
+#singleProjectPage img {
+  height: 600px;
+  width: auto;
 }
 
 /*********************/

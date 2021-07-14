@@ -8,7 +8,7 @@ const About = () => {
                 <img src="https://avatars.githubusercontent.com/u/36010345?s=460&u=10800388b8f1955e283ad5dec7a574f39e9215af&v=4" alt="Erich Purpur headshot"></img>
                 </div>
                 <div id="AboutMeText">
-                <h1><u> About Me </u></h1>
+                <h1> About Me </h1>
                 <br></br>
                 <p>I am a research librarian at the University of Virginia in Charlottesville, Virginia. I am looking to combine my 
                  Geographic Information System (GIS), data analysis, and web development skills. I specialize in web mapping applications and data visualization.</p> 

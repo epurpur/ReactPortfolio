@@ -94,7 +94,7 @@ const Contact = () => {
             <br></br>
             <p id='hoverText'>{hoverText}</p>
             <br></br>
-            <h1> Or Send a Message </h1>
+            <h2> Or Send a Message </h2>
             <br></br>
             <div className="myForm">
                 <form onSubmit={handleSubmit}>
