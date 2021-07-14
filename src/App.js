@@ -37,7 +37,7 @@ function App() {
       id: 3,
       title: 'Boone Real Estate',
       active: true,
-      id: `Since 2018 I've collaborated with <a href="https://boonerealestate.com/">Boone Real Estate</a> to improve and manage a direct-mail marketing campaign. I set up a <a href="https://www.postgresql.org/">PostgreSQL</a> database and used 
+      info: `Since 2018 I've collaborated with <a href="https://boonerealestate.com/">Boone Real Estate</a> to improve and manage a direct-mail marketing campaign. I set up a <a href="https://www.postgresql.org/">PostgreSQL</a> database and used 
       python scripts as well as PostgreSQL's <a href="https://postgis.net/">PostGIS</a> spatial extension in order to clean the large dataset (~230k records). I later
       integrated this data into the company's <a href=" https://www.salesforce.com/">Salesforce</a> instance and configured <a href="https://www.geopointe.com/">Geopointe</a>, a native Salesforce mapping extension, to visualize the data spatially. 
       This allows for easier integration with the company's direct-mail workfow and management of its internal data.`,
