@@ -2,6 +2,8 @@
   # Project Name:
 
   React Portfolio
+  
+  ## Deployed Application
 
   ## License
 
@@ -10,34 +12,14 @@
   ## Table of Contents
 
   - [Title](#Project-Name)
+  - [Deployed Application(#Deployed-Application)
   - [License](#License)
   - [Description](#Description)
-  - [Installation](#Installation)
-  - [Usage](#Usage)
-  - [Contributions](#Contributions)
-  - [Tests](#Tests)
   - [Questions](#Questions)
 
   ## Description
 
   A developer portfolio for myself, Erich Purpur, built in React!
-
-  ## Installation
-
-  Navigate to the root directory of this repository and run the following commands to install necessary dependencies:
-
-    
-
-  ## Usage
-
-  
-
-  ## Contributions 
-
-  
-
-  ## Tests 
-
   
 
   ## Questions 
