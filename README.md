@@ -4,6 +4,8 @@
   React Portfolio
   
   ## Deployed Application
+  
+  https://ep-react-portfolio.herokuapp.com/
 
   ## License
 
