@@ -237,8 +237,6 @@ nav {
 }
 
 
-
-
 /*********************/
 /* Contact Component */
 /*********************/
@@ -342,7 +340,6 @@ footer {
     height: 300px;
     margin: 10px;
   }
-  
 }
 
 @media screen and (max-width: 1000px) {
@@ -358,6 +355,17 @@ footer {
   
   .container-fluid li a { font-size: 35px; }
 
+  /*************************/
+  /* Single Page Component */
+  /*************************/
+
+  #singleProjectContainer {flex-direction: column;}
+
+  #singleProjectImg {width: 80%;}
+
+  #singleProjectInfo {
+    width: 90%;
+  }
 }
 
 
@@ -379,10 +387,15 @@ footer {
   #AboutMeImg { width: 100%}
 
   #AboutMeText {width: 100%}
-  
 }
 
 @media screen and (max-width: 700px) {
+
+  /*****************/
+  /* Global Styles */
+  /*****************/
+
+  .App h2 {font-size: 50px;}
 
   /***********************/
   /* Portfolio Component */
@@ -401,11 +414,37 @@ footer {
     margin: 15px;
   }
   
-  .image {
-    height: 100%;
+  .image {height: 100%;}
+
+  /*************************/
+  /* Single Page Component */
+  /*************************/
+
+  #singleProjectImg {width: 85%;}
+
+  #singleProjectImg img {height: 300px;}
+
+}
+
+@media screen and (max-width: 542px) {
+
+  /*************************/
+  /* Single Page Component */
+  /*************************/
+
+  #projectLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #projectLinks a {
+    margin: 5px;
   }
 
 }
+
 
 @media screen and (max-width: 500px) {
 
@@ -419,5 +458,16 @@ footer {
   }
   
   #AboutMeText {font-size: 18px}
-  
+
+  /*************************/
+  /* Single Page Component */
+  /*************************/
+
+  #singleProjectImg {width: 100%;}
+
+  #singleProjectImg img {height: 250px;}
+
+  #singleProjectText {
+    font-size: 18px;
+  }
 }
