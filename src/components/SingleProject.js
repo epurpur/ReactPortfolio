@@ -16,7 +16,7 @@ const SingleProject = ( {title, info, imgLink, deployLink, githubLink} ) => {
                     <br></br>
                     <div id='projectLinks'>
                         <a href={deployLink} target="_blank"><p>View Live</p></a>
-                        <a href={githubLink} targer="_blank"><p>View Github</p></a>
+                        <a href={githubLink} target="_blank"><p>View Github</p></a>
                         <Link to='/Portfolio'><p> Back to Portfolio Page </p></Link>
                     </div>
                 </div>

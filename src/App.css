@@ -72,17 +72,17 @@
 /********************/
 
 nav {
-  background-color: var(--background-black);
-}
+    background-color: var(--background-black);
+  }
 
-nav .navbar-brand {
+  #myName {
   color: var(--font-pink) !important;
   font-family: var(--text-header);
   font-size: 70px;
   margin-left: 150px;
   }
 
-nav .navbar-nav li a {
+.container-fluid li a {
   color: var(--font-pink) !important;
   font-family: var(--text-header);
   font-size: 40px;
@@ -318,4 +318,106 @@ footer {
 #footerName {
   color: var(--font-pink);
   font-family: var(--text-header);
+}
+
+
+
+
+
+
+/*************************************************************/
+
+
+/*****************/
+/* Media Queries */
+/*****************/
+
+@media screen and (max-width: 1150px) {
+  
+  /*******************/
+  /* About component */
+  /*******************/
+
+  #AboutMeImg img {
+    height: 300px;
+    margin: 10px;
+  }
+  
+}
+
+@media screen and (max-width: 1000px) {
+
+  /********************/
+  /* Header component */
+  /********************/
+  
+  #myName {
+    font-size: 70px;
+    margin-left: 50px;
+    }
+  
+  .container-fluid li a { font-size: 35px; }
+
+}
+
+
+@media screen and (max-width: 900px) {
+  
+  /*******************/
+  /* About component */
+  /*******************/
+
+  #About  {
+    text-align: center;
+  }
+  
+  #AboutMeContainer{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #AboutMeImg { width: 100%}
+
+  #AboutMeText {width: 100%}
+  
+}
+
+@media screen and (max-width: 700px) {
+
+  /***********************/
+  /* Portfolio Component */
+  /***********************/
+
+  #portfolioCardsHolder {flex-direction: column;}
+
+  /**************************/
+  /* Project Card Component */
+  /**************************/
+
+  .card {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin: 15px;
+  }
+  
+  .image {
+    height: 100%;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  /*******************/
+  /* About component */
+  /*******************/
+
+  #AboutMeImg img {
+    height: 250px;
+    margin: 10px;
+  }
+  
+  #AboutMeText {font-size: 18px}
+  
 }

@@ -9,7 +9,7 @@ const Header = () => {
         <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
             <a className="navbar-brand" href="/" id='myName'>Erich Purpur</a>
-            <div className="collapse navbar-collapse" id="navbarNav">
+            <div id="navbarNav">
                 <NavLinks />
             </div>
         </div>
