@@ -12,7 +12,7 @@
   ## Table of Contents
 
   - [Title](#Project-Name)
-  - [Deployed Application(#Deployed-Application)
+  - [Deployed Application](#Deployed-Application)
   - [License](#License)
   - [Description](#Description)
   - [Questions](#Questions)
