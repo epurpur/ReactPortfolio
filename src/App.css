@@ -73,6 +73,10 @@
 
 nav {
     background-color: var(--background-black);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
   #myName {
@@ -80,14 +84,28 @@ nav {
   font-family: var(--text-header);
   font-size: 70px;
   margin-left: 150px;
+  text-align: center;
+  width: 40%;
   }
 
-.container-fluid li a {
-  color: var(--font-pink) !important;
-  font-family: var(--text-header);
+  #navItems {
+    width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+/**********************/
+/* NavLinks Component */
+/**********************/
+
+.navLinkItem {
   font-size: 40px;
-  margin: 0 10px 0 10px;
+  font-family: var(--text-header) !important;
 }
+
 
 /*******************/
 /* About component */
@@ -321,8 +339,6 @@ footer {
 
 
 
-
-
 /*************************************************************/
 
 
@@ -371,6 +387,23 @@ footer {
 
 @media screen and (max-width: 900px) {
   
+  /********************/
+  /* Header component */
+  /********************/
+
+  nav {
+    flex-direction: column;
+  }
+
+  #myName {
+  width: 100%;
+  margin-left: 50px;
+  }
+
+  #navItems {
+    width: 100%;
+  }
+
   /*******************/
   /* About component */
   /*******************/
@@ -447,6 +480,26 @@ footer {
 
 
 @media screen and (max-width: 500px) {
+
+/********************/
+/* Header component */
+/********************/
+
+
+#myName {
+font-size: 60px;
+margin-left: 0px;
+}
+
+
+/**********************/
+/* NavLinks Component */
+/**********************/
+
+.navLinkItem {
+font-size: 30px;
+}
+
 
   /*******************/
   /* About component */

@@ -33,15 +33,14 @@ const NavLinks = () => {
     }
 
     return (
-        <ul className="navbar-nav ms-auto">
-            {/* Make list of HTML of each navbar item */}
+        <>
             {navLinks.map((link) => 
-            ( <li className="nav-item" key={link.id} onClick={() => toggleUnderline(link.id)}>
-            {/* Use conditional to evaluate if id.underlined === true. If so add underline tag. If not, no underline */}    
-              <Link key={link.id} className="nav-link active" aria-current="page" to={link.title}>{(link.underlined ? <u>{link.title}</u>: `${link.title}` )}</Link>
-              </li> )
+                (<p className="navLinkItem" key={link.id} onClick={() => toggleUnderline(link.id)}>
+                    {/* Use conditional to evaluate if id.underlined === true. If so add underline tag. If not, no underline */}    
+                    <Link key={link.id} className="nav-link" aria-current="page" to={link.title} style={{ color: '#F64C72' }}>{(link.underlined ? <u>{link.title}</u>: `${link.title}` )}</Link>
+                </p>)
             )}
-        </ul>
+        </>
     )
 }
 

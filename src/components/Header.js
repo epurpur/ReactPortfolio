@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import NavLinks from './NavLinks'
 
 const Header = () => {
@@ -6,13 +8,11 @@ const Header = () => {
 
     return (
     <header>   
-        <nav className="navbar navbar-expand-lg">
-        <div className="container-fluid">
-            <a className="navbar-brand" href="/" id='myName'>Erich Purpur</a>
-            <div id="navbarNav">
+        <nav>
+            <Link to="/" id='myName'>Erich Purpur</Link>
+            <div id="navItems">
                 <NavLinks />
             </div>
-        </div>
         </nav>
     </header>
     )
