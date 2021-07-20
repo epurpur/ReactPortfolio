@@ -12,6 +12,7 @@ const SingleProject = ( {title, info, imgLink, deployLink, githubLink} ) => {
                     <img src={`/images/${imgLink}.png`} alt={`${title} application screenshot`}></img>
                 </div>
                 <div id='singleProjectInfo'>
+                    {/* reads text from 'info' item which contains HTML. This is translated into HTML by the dangerouslySetInnerHTML attribute */}
                     <div id='singleProjectText' dangerouslySetInnerHTML={{__html: info}}></div>
                     <br></br>
                     <div id='projectLinks'>
