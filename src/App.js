@@ -80,6 +80,16 @@ function App() {
       imgLink: 'npsfinder',
       deployLink: 'https://epurpur.github.io/NationalParkService/',
       githubLink: 'https://github.com/epurpur/NationalParkService',
+    },
+    {
+      id: 7,
+      title: 'ContraList',
+      active: true,
+      info: `ContraList is designed to connect construction jobs and labor. Contactors can post upcoming jobs and skilled labor can apply for them. This is a full stack MERN application with a <a target="_blank" href="https://www.mongodb.com/">MongoDB</a> back end, a <a target="_blank" href="https://expressjs.com/">Express</a> web framework, 
+      and a <a target="_blank" href="https://reactjs.org/">React</a> front end, and <a target="_blank" href="https://nodejs.org/en/">Node</a> web server. ContraList also uses a <a target="_blank" href="https://nodejs.org/en/">GraphQL</a> API.`,
+      imgLink: 'ContraList',
+      deployLink: 'https://contralist.herokuapp.com/',
+      githubLink: 'https://github.com/epurpur/ContraList'
     }
   ])
 
