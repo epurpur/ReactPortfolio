@@ -1,7 +1,7 @@
 
   # Project Name:
 
-  React Portfolio
+  Erich Purpur React Portfolio
   
   ## Deployed Application
   
