@@ -90,6 +90,16 @@ function App() {
       imgLink: 'ContraList',
       deployLink: 'https://contralist.herokuapp.com/',
       githubLink: 'https://github.com/epurpur/ContraList'
+    },
+    {
+      id: 8,
+      title: 'River Monitor',
+      active: true,
+      info: `River monitor is a simple <a target="_blank" href="https://reactjs.org/">React</a> front end application. This is a hobby project which allows me and other local climbers to check the river levels and conditions, which affect access to our local climbing areas.
+      When the water is too high, we can't get to the cliffs! The data comes from the <a target="_blank" href="https://waterservices.usgs.gov/rest/">USGS Water Services API</a>.`,
+      imgLink: 'RiverMonitor',
+      deployLink: 'https://river-monitor.herokuapp.com/',
+      githubLink: 'https://github.com/epurpur/river_monitor'
     }
   ])
 
