@@ -9,17 +9,6 @@ const Contact = () => {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
 
-    const handleSubmit = (e) => {
-        // handle press submit button
-        e.preventDefault()
-
-        // if I were to make a POST request to a Database it would happen here
-        const userMessage = {name, email, message}
-
-        alert('Your message has been submitted! Thank you for your patience while I return your inquiry.');
-    }
-
-
     const sendEmail = (e) => {
         e.preventDefault(); // Prevent the form from submitting normally
 
