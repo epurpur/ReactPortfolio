@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import emailjs from 'emailjs-com';
+
 
 const Contact = () => {
 
@@ -16,6 +18,25 @@ const Contact = () => {
 
         alert('Your message has been submitted! Thank you for your patience while I return your inquiry.');
     }
+
+
+    const sendEmail = (e) => {
+        e.preventDefault(); // Prevent the form from submitting normally
+
+        emailjs.init('u7LUx7KCJE0yZeYJh');
+
+        emailjs.send('service_09j21g5', 'template_4ugrpj8', {
+          // Replace the placeholders with actual form data
+          name: name,
+          email: email,
+          message: message
+        })
+        .then(function(response) {
+          console.log('Email sent!', response.status, response.text);
+        }, function(error) {
+          console.error('Error sending email:', error);
+        });
+      }
 
     // set state variables for contact-info fields
     const [contactInfo, setContactInfo] = useState([
@@ -97,7 +118,7 @@ const Contact = () => {
             <h2> Or Send a Message </h2>
             <br></br>
             <div className="myForm">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={sendEmail}>
                     <label>Your Name</label>
                     <input
                         type="text"
