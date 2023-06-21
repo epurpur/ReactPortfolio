@@ -22,6 +22,11 @@ const Contact = () => {
         })
         .then(function(response) {
           console.log('Email sent!', response.status, response.text);
+          alert("Your message has been sent, thank you for your interest")
+          // Clear input fields upon submission
+          setName("")
+          setEmail("")
+          setMessage("")
         }, function(error) {
           console.error('Error sending email:', error);
         });
